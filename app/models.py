@@ -19,13 +19,14 @@ class User(AbstractBaseUser, PermissionsMixin):
     is_admin = models.BooleanField(default = False) #admin
     is_superuser = models.BooleanField(default=False) #superuser
 
-    def __str__(self):
-        return self.email
-
     objects = UserManager()
         
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = [] #email and password by default
 
-   
+    def __str__(self):
+        return self.email
         
+
+        #msg status data
+        #add user using api

@@ -18,6 +18,12 @@ from django.urls import path, include
 from rest_framework import renderers
 from app import views
 
+
+
+
 urlpatterns = [
     path('', include(views.User)),
+    path('user/<int:pk>', views.UserViewSet)
 ]
+
+
